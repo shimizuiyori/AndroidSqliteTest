@@ -1,5 +1,7 @@
 package com.gushi.gsORM;
 
+import android.database.sqlite.SQLiteDatabase;
+
 import java.util.HashMap;
 
 /**
@@ -11,7 +13,7 @@ public class gsDB {
     private HashMap<String, gsTable> tables;
 
     public gsDB (String dbName) {
-
+        SQLiteDatabase.openOrCreateDatabase(dbName, null);
     }
 
     public gsTable table(String tableName) {
