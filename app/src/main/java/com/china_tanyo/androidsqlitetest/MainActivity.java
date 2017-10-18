@@ -9,6 +9,10 @@ import android.util.Log;
 
 import com.gushi.sqlite.gsDBHelper;
 import com.google.gson.*;
+import com.china_tanyo.androidsqlitetest.entity.*;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +20,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        App app = new App();
+
+        person psn = new person(1, "顾世豪", 1, 24);
+
+        Field[] fields = psn.getClass().getDeclaredFields();
+        Field field = fields[1];
+        Class c2 = field.getType();
+        Type t1 = field.getGenericType();
+        c2 = byte[].class;
+        String str = c2.getName();
+        String s1 = c2.getName();
+        String s2 = c2.getCanonicalName();
+        String s3 = c2.getSimpleName();
 
         gsDBHelper dbHelper = new gsDBHelper(getApplicationContext());
         SQLiteDatabase db = dbHelper.getWritableDatabase();
