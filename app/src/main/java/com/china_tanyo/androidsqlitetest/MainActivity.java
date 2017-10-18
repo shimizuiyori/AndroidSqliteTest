@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
 //        ContentValues contentValues = new ContentValues();
-//        contentValues.put("name", "段廷瑞");
+//        contentValues.put("name", "周亚楠");
 //        contentValues.put("sex", "男");
-//        contentValues.put("age", 26);
-//        contentValues.put("address", "浙江省杭州市拱墅区");
-//        contentValues.put("remark", "也是一个程序员");
+//        contentValues.put("age", 25);
+//        contentValues.put("address", "浙江省杭州市萧山区");
+//        contentValues.put("remark", "Pos机维护员");
 //        db.insert("student", null, contentValues);
 
         Gson gson = new Gson();
